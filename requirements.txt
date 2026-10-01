@@ -1,0 +1,20 @@
+# Runtime dependencies. Everything here is already installed; nothing needs a
+# model download and nothing reaches the network.
+numpy==2.4.1
+pandas==3.0.6
+scikit-learn==1.9.1
+
+# Test runner only.
+pytest==8.3.4
+
+# --- Optional extras (not required to run the pipeline or the test suite) ----
+# A real semantic embedder. Uncomment to replace rag.embeddings.HashEmbedder:
+#   pip install sentence-transformers
+# and add an Embedder subclass in src/rag/embeddings.py (docstring has the
+# snippet), then register it in get_embedder().
+#
+# Hosted embeddings, if you would rather not run a model locally:
+#   pip install openai
+#
+# matplotlib is only needed if you chart the eval scorecard; the harness returns
+# a pandas DataFrame, so charting is optional.
